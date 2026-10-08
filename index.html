@@ -4,12 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Loop Systems – AI agents and workflow automation</title>
-<meta name="description" content="Loop Systems designs custom AI agents and workflow automations for restaurants, tradespeople and small businesses: customer messages, follow-ups, quotes, reporting.">
+<meta name="description" content="Loop Systems designs custom AI agents that automate repetitive work, whatever your industry. They learn how you work and get better with use. You approve what matters.">
 <meta property="og:title" content="Loop Systems – AI agents and workflow automation">
-<meta property="og:description" content="AI agents that handle messages, follow-ups and paperwork. You approve what matters.">
+<meta property="og:description" content="If it repeats, an AI agent can run it. Custom agents that improve with use.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://loopsystems.si">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232338F0'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='white' stroke-width='3'/%3E%3Ccircle cx='16' cy='9' r='3' fill='%23FFD23F'/%3E%3C/svg%3E">
+<link rel="icon" href="brand/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="brand/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="brand/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
@@ -72,6 +74,18 @@ section{padding:88px 0}
 .case li:last-child{margin-bottom:0}
 .case .you{margin-top:20px;font-weight:600}
 
+.any{background:var(--mist)}
+.any h2{font-size:clamp(2rem,4.6vw,3.6rem);font-weight:800;max-width:16em}
+.any p{margin-top:18px;color:var(--muted);max-width:32em}
+.any .btn{margin-top:28px}
+.ugrid{display:grid;grid-template-columns:repeat(3,1fr);gap:0 40px}
+.uitem{border-top:3px solid var(--blue);padding:18px 0 32px}
+.uitem h3{font-size:1.3rem;font-weight:700;margin-bottom:6px}
+.uitem p{color:var(--muted)}
+.more{margin-top:8px;font-weight:600}
+.learn .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.learn h2{font-size:clamp(1.9rem,3.6vw,2.7rem);font-weight:800}
+.learn .intro{margin-top:16px;max-width:30em;color:var(--muted)}
 .steps{list-style:none;counter-reset:s;display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
 .steps li{counter-increment:s;border-top:4px solid var(--blue);padding-top:16px}
 .steps li::before{content:counter(s);display:block;font-family:var(--display);font-weight:800;font-size:2.4rem;color:var(--blue);line-height:1;margin-bottom:10px}
@@ -105,8 +119,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 @media (max-width:860px){
   nav{display:none}
   .hero{padding:48px 0 64px}
-  .hero .wrap,.case-grid,.frame-grid,.pricing .wrap{grid-template-columns:1fr}
-  .pricing .wrap{gap:32px}
+  .hero .wrap,.case-grid,.frame-grid,.pricing .wrap,.ugrid,.learn .wrap{grid-template-columns:1fr}
+  .pricing .wrap,.learn .wrap{gap:32px}
   .steps{grid-template-columns:1fr 1fr}
   .row{grid-template-columns:1fr;gap:8px}
   section{padding:64px 0}
@@ -124,8 +138,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
       loop systems
     </a>
     <nav aria-label="Main navigation">
-      <a href="#services">Services</a>
-      <a href="#use-cases">Use cases</a>
+      <a href="#services">What we do</a>
       <a href="#process">Process</a>
       <a href="#pricing">Pricing</a>
       <a href="#contact">Contact</a>
@@ -137,11 +150,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 <div class="hero">
   <div class="wrap">
     <div>
-      <h1>AI agents that handle your messages, follow-ups and paperwork.</h1>
-      <p class="lead">Loop Systems designs and installs custom automations for restaurants, tradespeople and small businesses. Your data stays under your control, and you approve what matters.</p>
+      <h1>If it repeats, an AI agent can run it.</h1>
+      <p class="lead">Loop Systems designs custom AI agents for any repetitive task, in any industry. They learn how you work and get better with use, and you approve what matters.</p>
       <div class="actions">
         <a class="btn primary" href="mailto:hello@loopsystems.si?subject=Audit%20request">Request an audit</a>
-        <a class="btn ghost" href="#use-cases">See examples</a>
+        <a class="btn ghost" href="#process">How it works</a>
       </div>
     </div>
     <svg class="loop" viewBox="0 0 360 360" role="img" aria-label="An AI agent loop: message in, analyze, act, follow up">
@@ -162,47 +175,35 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 <section id="services">
   <div class="wrap">
     <div class="sec-head">
-      <h2>What an agent does for you</h2>
-      <p>An AI agent is an assistant that stays online around the clock, knows your business and acts inside your tools. Here is where it helps most.</p>
+      <h2>An assistant that does the work</h2>
+      <p>An AI agent stays online around the clock, knows your business and acts inside your tools. It does not just advise: it gets the task done.</p>
     </div>
     <div class="rows">
-      <div class="row"><h3>Answer your customers</h3><p>Bookings, opening hours, prices, availability: the agent replies on WhatsApp, Telegram or email, 24/7, in the customer's language.</p></div>
-      <div class="row"><h3>Lighten the admin</h3><p>Quotes to review, overdue invoice reminders, document collection, deadline alerts. The tasks that eat your evenings.</p></div>
-      <div class="row"><h3>Keep you informed</h3><p>A daily summary of what happened and what needs your attention: tonight's bookings, pending requests, reviews to answer.</p></div>
-      <div class="row"><h3>Plug into your tools</h3><p>Booking book, spreadsheets, calendar, inbox: we connect the agent to what you already use, without changing everything.</p></div>
+      <div class="row"><h3>It works where you work</h3><p>Inbox, messaging apps, spreadsheets, calendar, internal systems: we connect the agent to what you already use, without changing everything.</p></div>
+      <div class="row"><h3>It is built around you</h3><p>Your information, your rules, your way of doing things. No generic template, whatever your industry or size.</p></div>
+      <div class="row"><h3>It never clocks out</h3><p>Always on, with no queue and no handover. When it is unsure, it asks you instead of guessing.</p></div>
     </div>
   </div>
 </section>
 
-<section id="use-cases" class="cases">
+<section id="any-task" class="any">
   <div class="wrap">
-    <div class="sec-head">
-      <h2>Two concrete examples</h2>
-      <p>Each agent is set up with your own business information. It answers only from that base and hands over when it does not know.</p>
+    <h2>If you can describe the task, we can probably automate it.</h2>
+    <p>From a small recurring chore to a full workflow, we start from what costs you time and work out how an agent can take it on.</p>
+    <a class="btn dark" href="mailto:hello@loopsystems.si?subject=Audit%20request">Request an audit</a>
+  </div>
+</section>
+
+<section id="learning" class="learn">
+  <div class="wrap">
+    <div>
+      <h2>Agents that improve with use.</h2>
+      <p class="intro">Our agents are built on Hermes, which keeps a persistent memory and can turn work it has done into reusable skills. The more it runs on your tasks, the less you have to explain.</p>
     </div>
-    <div class="case-grid">
-      <article class="case">
-        <h3>Restaurants and hotels</h3>
-        <p class="who">Service has started, and messages keep coming in.</p>
-        <ul>
-          <li>It takes bookings by message and checks availability before confirming.</li>
-          <li>It answers questions about the menu, allergens, opening hours and access.</li>
-          <li>It drafts replies to online reviews for you to approve.</li>
-          <li>For a severe allergy or an out-of-scope question, it alerts the chef directly.</li>
-        </ul>
-        <p class="you">You stay in control of sensitive cases.</p>
-      </article>
-      <article class="case">
-        <h3>Tradespeople and construction</h3>
-        <p class="who">You are on site, and the paperwork waits until the evening.</p>
-        <ul>
-          <li>It prepares a quote from a voice message or a photo, for you to review before sending.</li>
-          <li>It chases overdue invoices, with a tone that gets firmer step by step.</li>
-          <li>It reminds customers and subcontractors of appointments.</li>
-          <li>It tracks supplier price requests and delivery times.</li>
-        </ul>
-        <p class="you">You approve every quote before it goes out.</p>
-      </article>
+    <div class="rows">
+      <div class="row"><h3>It remembers how you work</h3><p>Preferences, rules and past decisions are kept, so you do not repeat yourself.</p></div>
+      <div class="row"><h3>It reuses what worked</h3><p>Once a recurring task has been done well, the agent can apply the same method next time, faster and more consistently.</p></div>
+      <div class="row"><h3>You steer it</h3><p>Your corrections are what it learns from, and we review results with you every month.</p></div>
     </div>
   </div>
 </section>
@@ -254,8 +255,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 
 <section id="contact" class="contact">
   <div class="wrap">
-    <h2>Let's talk about what eats your time.</h2>
-    <p>Describe your repetitive tasks in a few lines. We will tell you whether an agent can take them over and where to start.</p>
+    <h2>Tell us what eats your time.</h2>
+    <p>Describe the tasks you would like to hand over, in a few lines. We will tell you whether an agent can take them on and where to start.</p>
     <div class="actions">
       <a class="btn primary" href="mailto:hello@loopsystems.si?subject=Audit%20request">hello@loopsystems.si</a>
     </div>
