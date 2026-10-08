@@ -1,30 +1,274 @@
-<!DOCTYPE html>  
-<html>  
-<head>  
-    <title>Summit Advanced | Your building, smarter.</title>  
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <style>  
-        body {  
-            text-align: center;  
-            padding: 50px;  
-            font-family: 'Poppins', sans-serif;  
-            background-color: #ffffff;  
-        }  
-        h1, h2 {  
-            color: #2B3467;  
-            margin-top: 20px;  
-        }  
-        img {  
-            width: 200px;  
-        }  
-    </style>  
-</head>  
-<body>  
-    <img src="Summit.png" width="200" alt="Summit Advanced Logo">  
-    <h1>Launching soon.</h1>  
-    <h2>Redefining energy efficiency for buildings.</h2>
-    <p>AI-driven optimization for extreme climates.</p>  
-    <p>Contact us: <a href="mailto:info@summitadvanced.com">info@summitadvanced.com</a></p>  
-</body>  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loop Systems – AI agents and workflow automation</title>
+<meta name="description" content="Loop Systems designs custom AI agents and workflow automations for restaurants, tradespeople and small businesses: customer messages, follow-ups, quotes, reporting.">
+<meta property="og:title" content="Loop Systems – AI agents and workflow automation">
+<meta property="og:description" content="AI agents that handle messages, follow-ups and paperwork. You approve what matters.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://loopsystems.si">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232338F0'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='white' stroke-width='3'/%3E%3Ccircle cx='16' cy='9' r='3' fill='%23FFD23F'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#2338F0; --blue-deep:#1626B8; --ink:#0B1026; --paper:#FAFAF7; --mist:#E9ECFF; --signal:#FFD23F; --muted:#4A5070;
+  --display:'Bricolage Grotesque','Segoe UI',Helvetica,Arial,sans-serif;
+  --body:'Hanken Grotesk','Segoe UI',Helvetica,Arial,sans-serif;
+  --max:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:var(--body);font-size:1.0625rem;line-height:1.6;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--signal);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);line-height:1.08;letter-spacing:-0.02em}
+
+.top{position:sticky;top:0;z-index:10;background:var(--blue);color:#fff}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:1.2rem;text-decoration:none;letter-spacing:-0.02em}
+.brand svg{width:28px;height:28px}
+nav{display:flex;gap:28px;font-size:.95rem;font-weight:500}
+nav a{text-decoration:none;opacity:.9}
+nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:5px}
+
+.hero{background:var(--blue);color:#fff;padding:72px 0 96px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.4rem,5.4vw,4.4rem);font-weight:800}
+.hero p.lead{margin-top:24px;font-size:1.2rem;max-width:34em;color:#E3E7FF}
+.actions{margin-top:36px;display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-block;padding:14px 24px;border-radius:999px;font-weight:600;text-decoration:none;font-size:1rem;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:var(--signal);color:var(--ink)}
+.btn.dark{background:var(--ink);color:#fff}
+.btn.ghost{border:2px solid rgba(255,255,255,.55);color:#fff}
+.btn.ghost:hover{border-color:#fff}
+.loop{width:100%;max-width:420px;justify-self:center}
+.loop text{font-family:var(--display);font-weight:700;font-size:15px;fill:#fff}
+.loop .center{font-size:14px;font-weight:500;fill:#C9D0FF}
+.orbit{transform-origin:180px 180px;animation:spin 14s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+section{padding:88px 0}
+.sec-head{max-width:640px;margin-bottom:48px}
+.sec-head h2{font-size:clamp(1.9rem,3.6vw,2.7rem);font-weight:800}
+.sec-head p{margin-top:14px;color:var(--muted)}
+
+.rows{border-top:2px solid var(--ink)}
+.row{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:32px;padding:28px 0;border-bottom:1px solid #C8CCE0}
+.row h3{font-size:1.45rem;font-weight:700}
+.row p{color:var(--muted);max-width:36em}
+
+.cases{background:var(--mist)}
+.case-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.case h3{font-size:1.7rem;font-weight:800;margin-bottom:6px}
+.case .who{color:var(--blue-deep);font-weight:600;margin-bottom:18px}
+.case ul{list-style:none;border-left:3px solid var(--blue);padding-left:20px}
+.case li{margin-bottom:14px}
+.case li:last-child{margin-bottom:0}
+.case .you{margin-top:20px;font-weight:600}
+
+.steps{list-style:none;counter-reset:s;display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.steps li{counter-increment:s;border-top:4px solid var(--blue);padding-top:16px}
+.steps li::before{content:counter(s);display:block;font-family:var(--display);font-weight:800;font-size:2.4rem;color:var(--blue);line-height:1;margin-bottom:10px}
+.steps h3{font-size:1.2rem;font-weight:700;margin-bottom:6px}
+.steps p{color:var(--muted);font-size:.98rem}
+
+.pricing{background:var(--signal)}
+.pricing .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.pricing h2{font-size:clamp(1.9rem,3.6vw,2.7rem);font-weight:800}
+.pricing .intro{margin-top:16px;max-width:30em}
+.pricing .btn{margin-top:28px}
+.pricing .rows{border-top-color:var(--ink)}
+.pricing .row{grid-template-columns:1fr;gap:4px;padding:20px 0;border-bottom-color:rgba(11,16,38,.25)}
+.pricing .row h3{font-size:1.2rem}
+.pricing .row p{color:var(--ink);font-size:1rem}
+.pricing .note{margin-top:20px;font-weight:600}
+
+.frame{background:var(--ink);color:#fff}
+.frame h2{font-size:clamp(1.9rem,3.6vw,2.7rem);font-weight:800;max-width:14em}
+.frame-grid{margin-top:44px;display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.frame h3{font-size:1.25rem;font-weight:700;margin-bottom:8px;color:var(--signal)}
+.frame p{color:#C9CFEA;font-size:1rem}
+
+.contact{background:var(--blue);color:#fff}
+.contact h2{font-size:clamp(2rem,4.2vw,3.2rem);font-weight:800;max-width:15em}
+.contact p{margin-top:16px;max-width:34em;color:#E3E7FF}
+.contact .actions{margin-top:30px}
+footer{background:var(--blue-deep);color:#D5DAFF;font-size:.92rem;padding:24px 0}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+@media (max-width:860px){
+  nav{display:none}
+  .hero{padding:48px 0 64px}
+  .hero .wrap,.case-grid,.frame-grid,.pricing .wrap{grid-template-columns:1fr}
+  .pricing .wrap{gap:32px}
+  .steps{grid-template-columns:1fr 1fr}
+  .row{grid-template-columns:1fr;gap:8px}
+  section{padding:64px 0}
+}
+@media (max-width:520px){.steps{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.orbit{animation:none}.btn{transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="9" fill="none" stroke="#fff" stroke-width="3.5"/><circle cx="16" cy="7" r="3.6" fill="#FFD23F"/></svg>
+      loop systems
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#services">Services</a>
+      <a href="#use-cases">Use cases</a>
+      <a href="#process">Process</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <h1>AI agents that handle your messages, follow-ups and paperwork.</h1>
+      <p class="lead">Loop Systems designs and installs custom automations for restaurants, tradespeople and small businesses. Your data stays under your control, and you approve what matters.</p>
+      <div class="actions">
+        <a class="btn primary" href="mailto:hello@loopsystems.si?subject=Audit%20request">Request an audit</a>
+        <a class="btn ghost" href="#use-cases">See examples</a>
+      </div>
+    </div>
+    <svg class="loop" viewBox="0 0 360 360" role="img" aria-label="An AI agent loop: message in, analyze, act, follow up">
+      <circle cx="180" cy="180" r="120" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="2" stroke-dasharray="3 9" stroke-linecap="round"/>
+      <g class="orbit"><circle cx="180" cy="60" r="11" fill="#FFD23F"/></g>
+      <circle cx="180" cy="60" r="5" fill="#fff"/><circle cx="300" cy="180" r="5" fill="#fff"/>
+      <circle cx="180" cy="300" r="5" fill="#fff"/><circle cx="60" cy="180" r="5" fill="#fff"/>
+      <text x="180" y="34" text-anchor="middle">Message in</text>
+      <text x="300" y="206" text-anchor="middle">Act</text>
+      <text x="180" y="330" text-anchor="middle">Follow up</text>
+      <text x="60" y="206" text-anchor="middle">Analyze</text>
+      <text class="center" x="180" y="176" text-anchor="middle">Every loop</text>
+      <text class="center" x="180" y="196" text-anchor="middle">frees up time</text>
+    </svg>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>What an agent does for you</h2>
+      <p>An AI agent is an assistant that stays online around the clock, knows your business and acts inside your tools. Here is where it helps most.</p>
+    </div>
+    <div class="rows">
+      <div class="row"><h3>Answer your customers</h3><p>Bookings, opening hours, prices, availability: the agent replies on WhatsApp, Telegram or email, 24/7, in the customer's language.</p></div>
+      <div class="row"><h3>Lighten the admin</h3><p>Quotes to review, overdue invoice reminders, document collection, deadline alerts. The tasks that eat your evenings.</p></div>
+      <div class="row"><h3>Keep you informed</h3><p>A daily summary of what happened and what needs your attention: tonight's bookings, pending requests, reviews to answer.</p></div>
+      <div class="row"><h3>Plug into your tools</h3><p>Booking book, spreadsheets, calendar, inbox: we connect the agent to what you already use, without changing everything.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="use-cases" class="cases">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Two concrete examples</h2>
+      <p>Each agent is set up with your own business information. It answers only from that base and hands over when it does not know.</p>
+    </div>
+    <div class="case-grid">
+      <article class="case">
+        <h3>Restaurants and hotels</h3>
+        <p class="who">Service has started, and messages keep coming in.</p>
+        <ul>
+          <li>It takes bookings by message and checks availability before confirming.</li>
+          <li>It answers questions about the menu, allergens, opening hours and access.</li>
+          <li>It drafts replies to online reviews for you to approve.</li>
+          <li>For a severe allergy or an out-of-scope question, it alerts the chef directly.</li>
+        </ul>
+        <p class="you">You stay in control of sensitive cases.</p>
+      </article>
+      <article class="case">
+        <h3>Tradespeople and construction</h3>
+        <p class="who">You are on site, and the paperwork waits until the evening.</p>
+        <ul>
+          <li>It prepares a quote from a voice message or a photo, for you to review before sending.</li>
+          <li>It chases overdue invoices, with a tone that gets firmer step by step.</li>
+          <li>It reminds customers and subcontractors of appointments.</li>
+          <li>It tracks supplier price requests and delivery times.</li>
+        </ul>
+        <p class="you">You approve every quote before it goes out.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>How it works</h2>
+      <p>Four steps, from the first conversation to an agent that really works for you.</p>
+    </div>
+    <ol class="steps">
+      <li><h3>Audit</h3><p>Together we review your messages and repetitive tasks to find what is worth automating.</p></li>
+      <li><h3>Prototype</h3><p>We build the agent with your information and test it on your real cases.</p></li>
+      <li><h3>Go live</h3><p>The agent is connected to your channels and tools. You know when it acts and when it asks you.</p></li>
+      <li><h3>Monthly follow-up</h3><p>We adjust answers and rules based on real conversations.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="pricing" class="pricing">
+  <div class="wrap">
+    <div>
+      <h2>Priced per workflow, after an audit.</h2>
+      <p class="intro">No two businesses automate the same things, so we do not sell fixed packages. The audit tells us what is worth automating, and you get a written quote for each workflow.</p>
+      <a class="btn dark" href="mailto:hello@loopsystems.si?subject=Audit%20request">Request an audit</a>
+    </div>
+    <div>
+      <div class="rows">
+        <div class="row"><h3>The workflows you choose</h3><p>Each automation is quoted on its own. You start with one and add others later.</p></div>
+        <div class="row"><h3>The tools to connect</h3><p>The more systems the agent has to read and update, the more setup it needs.</p></div>
+        <div class="row"><h3>Channels and volume</h3><p>WhatsApp, Telegram, email, and how many messages you handle.</p></div>
+        <div class="row"><h3>Your level of oversight</h3><p>Which actions the agent takes alone and which wait for your approval.</p></div>
+      </div>
+      <p class="note">After go-live, ongoing support is quoted separately.</p>
+    </div>
+  </div>
+</section>
+
+<section class="frame">
+  <div class="wrap">
+    <h2>A useful agent is a framed agent.</h2>
+    <div class="frame-grid">
+      <div><h3>It invents nothing</h3><p>The agent answers from your information. Without a reliable answer, it tells the customer and passes the question to you.</p></div>
+      <div><h3>You approve</h3><p>Quotes, sensitive replies, commercial gestures: whatever commits your business goes through you.</p></div>
+      <div><h3>Your data stays controlled</h3><p>Hosting and access are defined together, in line with GDPR. We use open-source tools that can be self-hosted.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Let's talk about what eats your time.</h2>
+    <p>Describe your repetitive tasks in a few lines. We will tell you whether an agent can take them over and where to start.</p>
+    <div class="actions">
+      <a class="btn primary" href="mailto:hello@loopsystems.si?subject=Audit%20request">hello@loopsystems.si</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Loop Systems</span>
+    <span>loopsystems.si</span>
+  </div>
+</footer>
+
+</body>
 </html>
